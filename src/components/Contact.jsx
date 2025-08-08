@@ -77,7 +77,7 @@ export default function Contact() {
     setStatus({ loading: true, success: null, error: null });
 
     try {
-      const res = await axios.post('http://localhost:8000/api/sendMessage', formData);// 👈 Change this URL to your backend endpoint
+      const res = await axios.post('https://mohsin-portfolio-backend.vercel.app/api/sendMessage', formData); // 👈 Change this URL to your backend endpoint
 
       if (res.status === 200) {
         setStatus({ loading: false, success: 'Message sent successfully!', error: null });
