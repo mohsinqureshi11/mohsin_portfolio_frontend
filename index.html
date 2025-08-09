@@ -19,6 +19,8 @@
   <meta name="keywords" content="Mohsin Qureshi, portfolio, web developer, full stack developer, React developer, projects, skills, contact">
   <meta name="author" content="Mohsin Qureshi">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
   <meta name="theme-color" content="#000000">
   <meta name="application-name" content="Mohsin's Portfolio">
   <meta name="msapplication-TileColor" content="#000000">
@@ -34,6 +36,32 @@
       html {
   scroll-behavior: smooth;
 }
+    </style>
+
+    <style>
+      /* 1. Body ke liye universal styles */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background-color: #fff;
+        overflow-x: hidden;
+      }
+
+      /* 2. Mobile devices (max 600px) ke liye fix width */
+      @media screen and (max-width: 600px) {
+        body {
+          max-width: 600px;
+          margin: auto;
+        }
+      }
+
+      /* 3. Laptop/Desktop view ke liye */
+      @media screen and (min-width: 601px) {
+        body {
+          max-width: 100%;
+        }
+      }
     </style>
   </head>
   <body>
