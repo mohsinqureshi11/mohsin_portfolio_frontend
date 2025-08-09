@@ -1,11 +1,11 @@
-
-
+// src/api/axios.js
 import axios from "axios";
 
-export default axios.create({
-  baseURL: "https://mohsin-portfolio-backend.vercel.app/api",
+const API = axios.create({
+  baseURL: "https://mohsin-portfolio-backend.vercel.app/api", // ✅ Backend base URL
   headers: {
-    "Content-Type": "application/json",
-  },
+    "Content-Type": "application/json"
+  }
 });
 
+export default API;
