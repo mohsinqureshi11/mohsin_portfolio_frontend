@@ -1,11 +1,11 @@
-import axios from 'axios';
-
-await axios.post('http://localhost:8000/api/message', formData);
 
 
+import axios from "axios";
 
-
-
-
-
+export default axios.create({
+  baseURL: "https://mohsin-portfolio-backend.vercel.app/api",
+  headers: {
+    "Content-Type": "application/json",
+  },
+});
 
