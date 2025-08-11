@@ -38,26 +38,40 @@ const Contact = () => {
   };
 
   return (
-    <section className="contact">
-      <h2>Contact Me</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="name"
-          placeholder="Your Name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
+    <section className="py-16 px-4 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white" id="contact">
+      <div className="max-w-4xl mx-auto text-center">
+        <h2 className="text-4xl font-bold mb-4">Get in Touch</h2>
+        <p className="text-gray-400 mb-12">
+          Have a question, a project idea, or just want to say hi?  
+          Fill out the form below and I’ll get back to you soon.
+        </p>
+      </div>
 
-        <input
-          type="email"
-          name="email"
-          placeholder="Your Email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
+      <form
+        onSubmit={handleSubmit}
+        className="max-w-2xl mx-auto bg-gray-800/60 p-8 rounded-2xl shadow-lg backdrop-blur-md border border-gray-700"
+      >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+            className="p-4 rounded-lg bg-gray-900 border border-gray-700 text-white focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 outline-none transition-all"
+          />
+
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            className="p-4 rounded-lg bg-gray-900 border border-gray-700 text-white focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 outline-none transition-all"
+          />
+        </div>
 
         <textarea
           name="message"
@@ -65,14 +79,28 @@ const Contact = () => {
           value={formData.message}
           onChange={handleChange}
           required
+          rows="5"
+          className="mt-6 p-4 rounded-lg bg-gray-900 border border-gray-700 text-white focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 outline-none transition-all w-full"
         ></textarea>
 
-        <button type="submit" disabled={loading}>
+        <button
+          type="submit"
+          disabled={loading}
+          className="mt-6 w-full py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg shadow-md transition-all"
+        >
           {loading ? "Sending..." : "Send Message"}
         </button>
       </form>
 
-      {status && <p>{status}</p>}
+      {status && (
+        <p
+          className={`mt-6 text-center font-medium ${
+            status.includes("✅") ? "text-green-400" : "text-red-400"
+          }`}
+        >
+          {status}
+        </p>
+      )}
     </section>
   );
 };
