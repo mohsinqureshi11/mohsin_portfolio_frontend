@@ -7,7 +7,8 @@ export default function Header() {
 
   return (
     <header data-aos="fade-down" className="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-lg w-full">
-      <nav className="px-6 py-3 flex justify-between items-center max-w-7xl mx-auto">
+      <nav className="px-6 py-3 flex justify-between items-center w-full">
+        
         {/* Logo & Brand */}
         <div className="flex items-center space-x-3">
           <img src={logo} alt="logo" className="w-12 h-12 rounded-full border-2 border-amber-400 shadow-md bg-white" />
@@ -15,6 +16,7 @@ export default function Header() {
             Mohsin'Portfolio
           </span>
         </div>
+
         {/* Desktop Nav */}
         <ul className="hidden md:flex space-x-8 font-semibold text-lg items-center">
           <li><a href="#welcome" className="text-gray-700 hover:text-amber-400 transition">Home</a></li>
@@ -35,6 +37,7 @@ export default function Header() {
             </a>
           </li>
         </ul>
+
         {/* Mobile Nav Button */}
         <button
           className="md:hidden text-3xl text-gray-700 hover:text-amber-400 transition focus:outline-none"
@@ -43,6 +46,7 @@ export default function Header() {
         >
           <BiMenu />
         </button>
+
         {/* Mobile Slide-out Menu */}
         {isOpen && (
           <div className="fixed inset-0 z-50 bg-black/30 flex justify-end">
@@ -74,6 +78,7 @@ export default function Header() {
           </div>
         )}
       </nav>
+
       {/* Slide-in animation keyframes */}
       <style>{`
         @keyframes slideInRight {
