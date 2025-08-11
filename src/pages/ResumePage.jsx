@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import profile from '../assets/profile.JPG';
+import profile from '../assets/profile.webp';
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaGithub, FaLinkedin, FaUserTie, FaBriefcase, FaGraduationCap, FaProjectDiagram, FaLanguage, FaTools, FaDownload, FaHome } from 'react-icons/fa';
 
 export default function ResumePage() {

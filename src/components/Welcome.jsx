@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import profilePic from "../assets/mohsin.jpg"; // Profile image
+import profilePic from "../assets/mohsin.webp"; // Profile image
 import bgPattern from "../assets/welcomemid.png"; // Background pattern
 
 export default function Welcome() {

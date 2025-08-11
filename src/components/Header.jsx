@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from "../assets/letter-t.png";
+import logo from "../assets/letter-t.webp";
 import { BiMenu, BiX } from 'react-icons/bi';
 
 export default function Header() {
