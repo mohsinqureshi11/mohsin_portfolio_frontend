@@ -1,11 +1,15 @@
-// src/api/axios.js
-import axios from "axios";
+import axios from 'axios';
+
+// const API = axios.create({
+//   baseURL: 'http://localhost:8000/api',  // locally chal raha hai 
+// });
+// export default API;
+
+ 
 
 const API = axios.create({
-  baseURL: "https://mohsin-portfolio-backend.vercel.app/api", // ✅ Backend base URL
-  headers: {
-    "Content-Type": "application/json"
-  }
+  baseURL: "https://mohsin-portfolio-backend.vercel.app/api", // 🔹 yaha apna deployed backend ka URL do
 });
 
 export default API;
+
