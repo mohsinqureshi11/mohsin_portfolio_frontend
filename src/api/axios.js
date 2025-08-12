@@ -7,9 +7,10 @@ import axios from 'axios';
 
  
 
-const API = axios.create({
-  baseURL: "https://mohsin-portfolio-backend.vercel.app", // 🔹 yaha apna deployed backend ka URL do
-});
+// const API = axios.create({
+//   baseURL: "https://mohsin-portfolio-backend.vercel.app", // 🔹 yaha apna deployed backend ka URL do
+// });
 
-export default API;
+// export default API;
 
+await axios.post('https://localhost:8000/api/contact',FormData);
