@@ -23,8 +23,8 @@ const Contact = () => {
     setStatus("");
 
     try {
-      const res = await API.post('/contact', formData); // local chal raha hai
-      
+      // const res = await API.post('/contact', formData); // local chal raha hai
+      const res = await axios.post('https://mohsin-portfolio-backend.vercel.app', formData);
       if (res.data.success) {
         setStatus("✅ Message sent successfully!");
         setFormData({ name: "", email: "", message: "" });
