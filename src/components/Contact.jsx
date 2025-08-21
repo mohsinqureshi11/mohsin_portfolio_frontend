@@ -1,6 +1,6 @@
 // src/components/Contact.jsx
 import React, { useState } from "react";
-import API from "../api/axios";
+// import API from "../api/axios";
 import axios from 'axios';
 
 const Contact = () => {
@@ -23,9 +23,8 @@ const Contact = () => {
     setStatus("");
 
     try {
-      // const res = await API.post('/contact', formData); // local chal raha hai
-      // const res = await API.post("/api/contact", formData); 
-      const res = await axios.post('https://mohsin-portfolio-backend.vercel.app/api/contact',formData);
+      const res = await API.post('/contact', formData); // local chal raha hai
+      
       if (res.data.success) {
         setStatus("✅ Message sent successfully!");
         setFormData({ name: "", email: "", message: "" });
