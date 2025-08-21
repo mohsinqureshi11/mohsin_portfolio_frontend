@@ -24,7 +24,15 @@ const Contact = () => {
 
     try {
       // const res = await API.post('/contact', formData); // local chal raha hai
-      const res = await axios.post('https://mohsin-portfolio-backend.vercel.app/api/contact', formData);
+      // const res = await axios.post('https://mohsin-portfolio-backend.vercel.app/api/contact', formData);
+      const res = await axios.post(
+        `https://mohsin-portfolio-backend.vercel.app/api/contact`,
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }
+      );
       if (res.data.success) {
         setStatus("✅ Message sent successfully!");
         setFormData({ name: "", email: "", message: "" });
